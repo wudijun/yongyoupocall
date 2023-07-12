@@ -358,7 +358,7 @@ def poc_U8AppProxy(url):
     print("用友GRP-U8 U8AppProxy任意文件上传漏洞检测完成-------验证方式： /yongyouU8_test.jsp")
 ################################################################################################################
 
-window=sg.Window('用友系列一把梭--POC(仅对用友系列，其它系统会误报)',layout) 
+window=sg.Window('用友系列一把梭--POC(仅限用友系列！)',layout) 
 if __name__ == '__main__':
     while True:
         event,values=window.read() 
