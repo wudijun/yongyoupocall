@@ -2,7 +2,6 @@ import PySimpleGUI as sg
 import requests
 layout=[
             [sg.Text("用友系列一把梭--POC (点击确认后等待即可) ")],
-            [sg.Text("仅限用友系列系统，其它系统会误报")],
             [sg.Text("如果漏洞存在则会弹窗提示该漏洞名称，请耐心等待！")],
             [sg.Text("URL：  "),sg.InputText("http://127.0.0.1:8080")],  
             [sg.Button("确认")]
@@ -359,7 +358,7 @@ def poc_U8AppProxy(url):
     print("用友GRP-U8 U8AppProxy任意文件上传漏洞检测完成-------验证方式： /yongyouU8_test.jsp")
 ################################################################################################################
 
-window=sg.Window('用友系列一把梭--POC(仅对用友系列)',layout) 
+window=sg.Window('用友系列一把梭--POC(仅对用友系列，其它系统会误报)',layout) 
 if __name__ == '__main__':
     while True:
         event,values=window.read() 
